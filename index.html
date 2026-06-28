@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VillageCare 360 — an Urban–Rural Healthcare Connectivity System bringing specialist telemedicine to villages." />
+  <title>VillageCare 360 · Urban–Rural Healthcare Connectivity</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Persistent 3D background canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-veil"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">
+      <span class="nav__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M11 3h2v6h6v2h-6v10h-2V11H3V9h8V3Z" fill="currentColor"/></svg>
+      </span>
+      <span>VillageCare<span class="accent">360</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#intro">Intro</a>
+      <a href="#problem">Problem</a>
+      <a href="#objective">Objective</a>
+      <a href="#telemedicine">Telemedicine</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#tech">Tech</a>
+      <a href="#process">Process</a>
+      <a href="#features">Features</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#future">Future</a>
+      <a href="#impact">Impact</a>
+      <a href="#team">Team</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- 1. HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <span class="hero__eyebrow reveal">Team MEDITECH · ID&nbsp;SKH009</span>
+        <h1 class="hero__title">
+          <span class="reveal">VillageCare</span>
+          <span class="hero__title-accent reveal">360</span>
+        </h1>
+        <p class="hero__tagline reveal">Urban–Rural Healthcare Connectivity System</p>
+        <p class="hero__sub reveal">Bringing specialist doctors to every village through telemedicine —
+          remote diagnosis, video consultations, and digital care that erase the distance between expertise and need.</p>
+        <div class="hero__cta reveal">
+          <a href="#intro" class="btn btn--primary">Explore the System</a>
+          <a href="#architecture" class="btn btn--ghost">See Architecture</a>
+        </div>
+      </div>
+      <a href="#intro" class="hero__scroll" aria-label="Scroll down">
+        <span class="hero__scroll-dot"></span>
+        <span class="hero__scroll-label">Scroll</span>
+      </a>
+    </section>
+
+    <!-- 2. INTRODUCTION -->
+    <section class="section" id="intro">
+      <div class="section__head reveal">
+        <span class="section__index">01</span>
+        <h2 class="section__title">Introduction</h2>
+        <p class="section__lead">Healthcare in India is not equally distributed. Cities have specialists; villages have the wait.</p>
+      </div>
+      <ul class="bullets">
+        <li class="bullet reveal"><span class="bullet__icon">⚖️</span><div><h3>Urban–rural inequality</h3><p>A widening gap in access to quality healthcare between cities and villages.</p></div></li>
+        <li class="bullet reveal"><span class="bullet__icon">🩺</span><div><h3>Shortage of specialists</h3><p>Rural regions lack the specialist doctors that complex conditions demand.</p></div></li>
+        <li class="bullet reveal"><span class="bullet__icon">🚌</span><div><h3>Travel cost &amp; delay</h3><p>Patients travel far and wait long — costing money, time, and sometimes lives.</p></div></li>
+        <li class="bullet reveal"><span class="bullet__icon">📲</span><div><h3>Need for digital health</h3><p>A scalable, affordable digital healthcare solution is no longer optional.</p></div></li>
+      </ul>
+    </section>
+
+    <!-- 3. PROBLEM STATEMENT -->
+    <section class="section" id="problem">
+      <div class="section__head reveal">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Problem Statement</h2>
+        <p class="section__lead">The cracks in rural healthcare, made visible.</p>
+      </div>
+      <div class="cards">
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__num">01</span><h3>No rural specialists</h3><p>Villages lack access to specialized doctors for anything beyond primary care.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__num">02</span><h3>Limited diagnostics</h3><p>Diagnostic facilities are scarce, delaying accurate detection of disease.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__num">03</span><h3>High mortality</h3><p>Elevated maternal &amp; infant mortality rates driven by gaps in timely care.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__num">04</span><h3>Delayed emergencies</h3><p>Critical emergency care arrives late when every minute counts.</p></article>
+      </div>
+    </section>
+
+    <!-- 4. OBJECTIVE -->
+    <section class="section" id="objective">
+      <div class="section__head reveal">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Objective of the System</h2>
+        <p class="section__lead">What VillageCare 360 sets out to achieve.</p>
+      </div>
+      <div class="grid-2">
+        <div class="pillar tilt reveal"><span class="pillar__icon">🖥️</span><h3>Remote specialist consultation</h3><p>Connect village patients to urban specialists without either leaving their location.</p></div>
+        <div class="pillar tilt reveal"><span class="pillar__icon">🛣️</span><h3>Reduce travel burden</h3><p>Cut the cost, time, and risk of long-distance journeys for treatment.</p></div>
+        <div class="pillar tilt reveal"><span class="pillar__icon">🌍</span><h3>Improve accessibility</h3><p>Make quality healthcare reachable for everyone, everywhere.</p></div>
+        <div class="pillar tilt reveal"><span class="pillar__icon">💸</span><h3>Affordable treatment</h3><p>Lower the overall cost of getting expert care.</p></div>
+      </div>
+    </section>
+
+    <!-- 5. TELEMEDICINE -->
+    <section class="section" id="telemedicine">
+      <div class="section__head reveal">
+        <span class="section__index">04</span>
+        <h2 class="section__title">What is Telemedicine?</h2>
+        <p class="section__lead">Remote diagnosis and treatment, powered by technology.</p>
+      </div>
+      <div class="split">
+        <div class="split__list">
+          <div class="featline reveal"><span>🔬</span><div><h3>Remote diagnosis &amp; treatment</h3><p>Care delivered using technology, across any distance.</p></div></div>
+          <div class="featline reveal"><span>🎥</span><div><h3>Video consultation</h3><p>Face-to-face appointments with doctors from anywhere.</p></div></div>
+          <div class="featline reveal"><span>📡</span><div><h3>Remote monitoring</h3><p>Vital signs tracked continuously from the patient's home.</p></div></div>
+          <div class="featline reveal"><span>📝</span><div><h3>Digital prescriptions</h3><p>Prescriptions issued and delivered electronically.</p></div></div>
+        </div>
+        <aside class="quote-card reveal">
+          <div class="quote-card__badge">WHO</div>
+          <blockquote>“Telemedicine is promoted globally by organizations like the World Health Organization.”</blockquote>
+          <p class="quote-card__cap">A recognised pillar of modern, inclusive healthcare.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 6. SYSTEM ARCHITECTURE -->
+    <section class="section" id="architecture">
+      <div class="section__head reveal">
+        <span class="section__index">05</span>
+        <h2 class="section__title">System Architecture</h2>
+        <p class="section__lead">How data flows from a village to a specialist and back.</p>
+      </div>
+      <div class="pipeline reveal" id="pipeline">
+        <div class="pipeline__track"><span class="pipeline__pulse"></span></div>
+        <div class="pipeline__stage"><span class="pipeline__icon">🏥</span><span class="pipeline__step">1</span><h3>Rural Health Center / Mobile App</h3><p>Patient entry point in the village.</p></div>
+        <div class="pipeline__stage"><span class="pipeline__icon">☁️</span><span class="pipeline__step">2</span><h3>Cloud Server</h3><p>Secure routing &amp; storage of health data.</p></div>
+        <div class="pipeline__stage"><span class="pipeline__icon">📊</span><span class="pipeline__step">3</span><h3>Urban Hospital Dashboard</h3><p>Where city hospitals receive cases.</p></div>
+        <div class="pipeline__stage"><span class="pipeline__icon">👨‍⚕️</span><span class="pipeline__step">4</span><h3>Doctor Consultation Interface</h3><p>Specialist reviews &amp; consults live.</p></div>
+        <div class="pipeline__stage"><span class="pipeline__icon">💊</span><span class="pipeline__step">5</span><h3>E-Prescription &amp; Follow-up</h3><p>Digital Rx and ongoing monitoring.</p></div>
+      </div>
+    </section>
+
+    <!-- 7. TECHNOLOGIES -->
+    <section class="section" id="tech">
+      <div class="section__head reveal">
+        <span class="section__index">06</span>
+        <h2 class="section__title">Technologies Used</h2>
+        <p class="section__lead">The stack that makes remote care possible.</p>
+      </div>
+      <div class="cards cards--tech">
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🤖</span><h3>AI Symptom Analysis</h3><p>Suggests possible diagnoses from entered symptoms.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">📟</span><h3>IoT Health Devices</h3><p>BP, ECG &amp; glucose monitors stream vitals in real time.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">☁️</span><h3>Cloud Computing</h3><p>Scalable, secure storage and processing of records.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">📱</span><h3>Mobile Applications</h3><p>The patient's gateway to care in their own hands.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">📶</span><h3>5G / Internet</h3><p>Low-latency connectivity for smooth live consults.</p></article>
+      </div>
+    </section>
+
+    <!-- 8. WORKING PROCESS -->
+    <section class="section" id="process">
+      <div class="section__head reveal">
+        <span class="section__index">07</span>
+        <h2 class="section__title">Working Process</h2>
+        <p class="section__lead">From registration to recovery — step by step.</p>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item reveal"><span class="timeline__dot"></span><div class="timeline__body"><span class="timeline__no">Step 1</span><h3>Patient registers</h3><p>At the rural center or through the mobile app.</p></div></li>
+        <li class="timeline__item reveal"><span class="timeline__dot"></span><div class="timeline__body"><span class="timeline__no">Step 2</span><h3>Symptoms entered</h3><p>Details are captured into the system.</p></div></li>
+        <li class="timeline__item reveal"><span class="timeline__dot"></span><div class="timeline__body"><span class="timeline__no">Step 3</span><h3>AI suggests diagnosis</h3><p>The system proposes possible conditions.</p></div></li>
+        <li class="timeline__item reveal"><span class="timeline__dot"></span><div class="timeline__body"><span class="timeline__no">Step 4</span><h3>Urban doctor connects</h3><p>A specialist joins via secure video call.</p></div></li>
+        <li class="timeline__item reveal"><span class="timeline__dot"></span><div class="timeline__body"><span class="timeline__no">Step 5</span><h3>Prescription sent</h3><p>The Rx is delivered digitally to the patient.</p></div></li>
+        <li class="timeline__item reveal"><span class="timeline__dot"></span><div class="timeline__body"><span class="timeline__no">Step 6</span><h3>Follow-up monitoring</h3><p>Recovery is tracked remotely over time.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- 9. KEY FEATURES -->
+    <section class="section" id="features">
+      <div class="section__head reveal">
+        <span class="section__index">08</span>
+        <h2 class="section__title">Key Features</h2>
+        <p class="section__lead">What patients and doctors get out of the box.</p>
+      </div>
+      <div class="cards">
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🕒</span><h3>24/7 Doctor Access</h3><p>Care any hour of any day.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🗣️</span><h3>Multilingual Support</h3><p>Speak to the system in your own language.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🗂️</span><h3>Electronic Medical Records</h3><p>A unified, portable patient history (EMR).</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🚨</span><h3>Emergency Alerts</h3><p>Instant escalation when it matters most.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">💳</span><h3>Online Payments</h3><p>Integrated, cashless transactions.</p></article>
+      </div>
+    </section>
+
+    <!-- 10. BENEFITS -->
+    <section class="section" id="benefits">
+      <div class="section__head reveal">
+        <span class="section__index">09</span>
+        <h2 class="section__title">Benefits</h2>
+        <p class="section__lead">The outcomes that matter.</p>
+      </div>
+      <div class="grid-2">
+        <div class="pillar tilt reveal"><span class="pillar__icon">🎯</span><h3>Specialist access</h3><p>Expert doctors within reach of every village.</p></div>
+        <div class="pillar tilt reveal"><span class="pillar__icon">💰</span><h3>Reduced travel cost</h3><p>Less money and time spent reaching care.</p></div>
+        <div class="pillar tilt reveal"><span class="pillar__icon">🔎</span><h3>Early disease detection</h3><p>Problems caught sooner, treated faster.</p></div>
+        <div class="pillar tilt reveal"><span class="pillar__icon">📈</span><h3>Better rural quality</h3><p>An overall lift in rural healthcare standards.</p></div>
+        <div class="pillar tilt reveal"><span class="pillar__icon">⚡</span><h3>Faster emergency response</h3><p>Critical help reaches patients quicker.</p></div>
+      </div>
+    </section>
+
+    <!-- 11. FUTURE -->
+    <section class="section" id="future">
+      <div class="section__head reveal">
+        <span class="section__index">10</span>
+        <h2 class="section__title">Future Enhancements</h2>
+        <p class="section__lead">Where VillageCare 360 goes next.</p>
+      </div>
+      <div class="cards">
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🧠</span><h3>AI early detection</h3><p>Predictive screening for disease before symptoms escalate.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🚁</span><h3>Drone medicine delivery</h3><p>Medicines flown directly to remote villages.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">⌚</span><h3>Wearable monitoring</h3><p>Continuous health tracking on the body.</p></article>
+        <article class="card tilt reveal"><div class="card__glow"></div><span class="card__icon">🏛️</span><h3>Govt scheme integration</h3><p>Linked with national health programmes.</p></article>
+      </div>
+    </section>
+
+    <!-- 12. SOCIAL IMPACT -->
+    <section class="section" id="impact">
+      <div class="section__head reveal">
+        <span class="section__index">11</span>
+        <h2 class="section__title">Social Impact</h2>
+        <p class="section__lead">Technology in service of people. <em>(Figures below are projected illustrations.)</em></p>
+      </div>
+      <div class="stats">
+        <div class="stat reveal"><span class="stat__num" data-target="600" data-suffix="M+">0</span><span class="stat__label">Rural lives reachable</span></div>
+        <div class="stat reveal"><span class="stat__num" data-target="70" data-suffix="%">0</span><span class="stat__label">Less travel for care</span></div>
+        <div class="stat reveal"><span class="stat__num" data-target="24" data-suffix="/7">0</span><span class="stat__label">Always-on access</span></div>
+        <div class="stat reveal"><span class="stat__num" data-target="3" data-suffix=" SDGs">0</span><span class="stat__label">Goals supported</span></div>
+      </div>
+      <ul class="bullets bullets--impact">
+        <li class="bullet reveal"><span class="bullet__icon">🌉</span><div><h3>Reduces the rural–urban gap</h3><p>Expertise reaches the places that lack it.</p></div></li>
+        <li class="bullet reveal"><span class="bullet__icon">❤️</span><div><h3>Saves lives</h3><p>Timely care prevents avoidable deaths.</p></div></li>
+        <li class="bullet reveal"><span class="bullet__icon">💡</span><div><h3>Promotes digital healthcare</h3><p>Builds the foundation for a connected health future.</p></div></li>
+        <li class="bullet reveal"><span class="bullet__icon">🎯</span><div><h3>Supports the SDGs</h3><p>Advances the UN Sustainable Development Goals.</p></div></li>
+      </ul>
+    </section>
+
+    <!-- 13. CONCLUSION -->
+    <section class="section section--center" id="conclusion">
+      <div class="section__head reveal">
+        <span class="section__index">12</span>
+        <h2 class="section__title">Conclusion</h2>
+      </div>
+      <div class="conclusion">
+        <p class="conclusion__line reveal">Technology can <strong>bridge healthcare inequality</strong>.</p>
+        <p class="conclusion__line reveal">Telemedicine <strong>connects expertise to need</strong>.</p>
+        <p class="conclusion__line reveal">Smart healthcare ensures <strong>inclusive development</strong>.</p>
+      </div>
+    </section>
+
+    <!-- 14. TEAM -->
+    <section class="section section--center" id="team">
+      <div class="section__head reveal">
+        <span class="section__index">13</span>
+        <h2 class="section__title">Thank You</h2>
+        <p class="section__lead">Presented by <strong>Team MEDITECH</strong> · ID&nbsp;SKH009</p>
+      </div>
+      <div class="team">
+        <div class="member tilt reveal"><div class="member__avatar">SS</div><h3>Sai Sandeep</h3><p>Team MEDITECH</p></div>
+        <div class="member tilt reveal"><div class="member__avatar">VY</div><h3>Vinay</h3><p>Team MEDITECH</p></div>
+        <div class="member tilt reveal"><div class="member__avatar">VV</div><h3>Vishnu Vardhan</h3><p>Team MEDITECH</p></div>
+        <div class="member tilt reveal"><div class="member__avatar">AS</div><h3>Asifuddin</h3><p>Team MEDITECH</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>VillageCare&nbsp;360 — Urban–Rural Healthcare Connectivity System · Team MEDITECH (SKH009)</p>
+    <p class="footer__sub">Built as a 100% offline 3D web experience · No API keys · Three.js + GSAP vendored locally</p>
+  </footer>
+
+  <!-- Vendored libraries (no CDN, no API keys, fully offline) -->
+  <script src="lib/three.min.js"></script>
+  <script src="lib/gsap.min.js"></script>
+  <script src="lib/ScrollTrigger.min.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
